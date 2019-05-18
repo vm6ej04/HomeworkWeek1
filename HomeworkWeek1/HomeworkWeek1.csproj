@@ -137,10 +137,44 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Customers.Context.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Customers.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Customers.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Customers.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Customers.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EFGeneratePartialClass.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EFGeneratePartialClass.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>Customers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.Partial.cs">
+      <DependentUpon>EFGeneratePartialClass.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\客戶聯絡人.cs">
+      <DependentUpon>Customers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\客戶聯絡人.Partial.cs">
+      <DependentUpon>EFGeneratePartialClass.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\客戶資料.cs">
+      <DependentUpon>Customers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\客戶資料.Partial.cs">
+      <DependentUpon>EFGeneratePartialClass.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\客戶銀行資訊.cs">
+      <DependentUpon>Customers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\客戶銀行資訊.Partial.cs">
+      <DependentUpon>EFGeneratePartialClass.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -156,6 +190,16 @@
     <Content Include="Models\Customers.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Customers.Context.cs</LastGenOutput>
+      <DependentUpon>Customers.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Customers.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Customers.edmx</DependentUpon>
+      <LastGenOutput>Customers.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\EFGeneratePartialClass.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EFGeneratePartialClass.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -163,9 +207,9 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Customers.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Models\Customers.edmx.diagram">
+    <Content Include="Models\Customers.edmx.diagram">
       <DependentUpon>Customers.edmx</DependentUpon>
-    </None>
+    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
