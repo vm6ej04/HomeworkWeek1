@@ -1,5 +1,6 @@
 namespace HomeworkWeek1.Models
 {
+    using HomeworkWeek1.DataTypeAttributes;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
@@ -24,11 +25,11 @@ namespace HomeworkWeek1.Models
         [Required]
         public string 姓名 { get; set; }
         
-        [StringLength(250, ErrorMessage="欄位長度不得大於 250 個字元")]
+        [EmailAddress]
         [Required]
         public string Email { get; set; }
         
-        [StringLength(50, ErrorMessage="欄位長度不得大於 50 個字元")]
+        [PhoneFormat]
         public string 手機 { get; set; }
         
         [StringLength(50, ErrorMessage="欄位長度不得大於 50 個字元")]

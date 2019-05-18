@@ -1,5 +1,6 @@
 namespace HomeworkWeek1.Models
 {
+    using HomeworkWeek1.DataTypeAttributes;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
@@ -22,7 +23,7 @@ namespace HomeworkWeek1.Models
         [Required]
         public string 統一編號 { get; set; }
         
-        [StringLength(50, ErrorMessage="欄位長度不得大於 50 個字元")]
+        [PhoneFormat]
         [Required]
         public string 電話 { get; set; }
         
@@ -32,7 +33,7 @@ namespace HomeworkWeek1.Models
         [StringLength(100, ErrorMessage="欄位長度不得大於 100 個字元")]
         public string 地址 { get; set; }
         
-        [StringLength(250, ErrorMessage="欄位長度不得大於 250 個字元")]
+        [EmailAddress]
         public string Email { get; set; }
         public enum SelectListEnum
         {
