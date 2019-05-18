@@ -132,6 +132,7 @@
     <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OverviewController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -157,6 +158,9 @@
     </Compile>
     <Compile Include="Models\vwCustomerOverview.cs">
       <DependentUpon>Customers.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\vwCustomerOverview.Partial.cs">
+      <DependentUpon>EFGeneratePartialClass.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\客戶聯絡人.cs">
       <DependentUpon>Customers.tt</DependentUpon>
@@ -250,6 +254,7 @@
     <Content Include="Views\Banks\Details.cshtml" />
     <Content Include="Views\Banks\Edit.cshtml" />
     <Content Include="Views\Banks\Index.cshtml" />
+    <Content Include="Views\Overview\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

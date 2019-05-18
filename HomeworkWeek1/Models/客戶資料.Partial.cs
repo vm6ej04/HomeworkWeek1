@@ -34,6 +34,17 @@ namespace HomeworkWeek1.Models
         
         [StringLength(250, ErrorMessage="欄位長度不得大於 250 個字元")]
         public string Email { get; set; }
+        public enum SelectListEnum
+        {
+            [Display(Name= "一般")]
+            Normal=0,
+            [Display(Name = "重要")]
+            Important=1,
+            [Display(Name = "很重要")]
+            VIP=2
+        }
+        [Required]
+        public IEnumerable<SelectListEnum> 類別 { get; set; }
         [Required]
         public bool 刪除 { get; set; }
     

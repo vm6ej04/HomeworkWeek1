@@ -38,6 +38,7 @@ namespace HomeworkWeek1.Controllers
         // GET: Customers/Create
         public ActionResult Create()
         {
+            ViewBag.CustomerType = new SelectList(db.客戶資料,"Id","類別");
             return View();
         }
 
@@ -46,7 +47,7 @@ namespace HomeworkWeek1.Controllers
         // 詳細資訊，請參閱 https://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,客戶名稱,統一編號,電話,傳真,地址,Email,刪除")] 客戶資料 客戶資料)
+        public ActionResult Create([Bind(Include = "Id,客戶名稱,統一編號,電話,傳真,地址,Email,刪除,類別")] 客戶資料 客戶資料)
         {
             if (ModelState.IsValid)
             {
@@ -54,7 +55,7 @@ namespace HomeworkWeek1.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
+            ViewBag.CustomerType = new SelectList(db.客戶資料, "Id", "類別", 客戶資料.類別);
             return View(客戶資料);
         }
 
@@ -78,7 +79,7 @@ namespace HomeworkWeek1.Controllers
         // 詳細資訊，請參閱 https://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,客戶名稱,統一編號,電話,傳真,地址,Email,刪除")] 客戶資料 客戶資料)
+        public ActionResult Edit([Bind(Include = "Id,客戶名稱,統一編號,電話,傳真,地址,Email,刪除,類別")] 客戶資料 客戶資料)
         {
             if (ModelState.IsValid)
             {
