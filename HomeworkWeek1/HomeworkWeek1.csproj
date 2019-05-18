@@ -155,11 +155,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EFGeneratePartialClass.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\sysdiagram.cs">
+    <Compile Include="Models\vwCustomerOverview.cs">
       <DependentUpon>Customers.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\sysdiagram.Partial.cs">
-      <DependentUpon>EFGeneratePartialClass.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\客戶聯絡人.cs">
       <DependentUpon>Customers.tt</DependentUpon>
