@@ -14,13 +14,8 @@ namespace HomeworkWeek1.DataTypeAttributes
 
         public PhoneFormat() : base(DataType.Text)
         {
-            Words = new string[]
-            {
-                "Will",
-                "Admin"
-            };
 
-            ErrorMessage = "電話號碼格式錯誤，需為09xx-xxxxxx";
+            ErrorMessage = "手機號碼格式錯誤，需為09xx-xxxxxx";
         }
         
         public override bool IsValid(object value)

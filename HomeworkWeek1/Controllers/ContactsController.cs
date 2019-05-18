@@ -12,7 +12,7 @@ namespace HomeworkWeek1.Controllers
 {
     public class ContactsController : Controller
     {
-        private CustomerEntities db = new CustomerEntities();
+        private Entities db = new Entities();
 
         // GET: Contacts
         public ActionResult Index()
@@ -115,7 +115,7 @@ namespace HomeworkWeek1.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             客戶聯絡人 客戶聯絡人 = db.客戶聯絡人.Find(id);
-            db.客戶聯絡人.Remove(客戶聯絡人);
+            客戶聯絡人.刪除 = true;
             db.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -12,7 +12,7 @@ namespace HomeworkWeek1.Controllers
 {
     public class BanksController : Controller
     {
-        private CustomerEntities db = new CustomerEntities();
+        private Entities db = new Entities();
 
         // GET: Banks
         public ActionResult Index()
@@ -115,7 +115,7 @@ namespace HomeworkWeek1.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             客戶銀行資訊 客戶銀行資訊 = db.客戶銀行資訊.Find(id);
-            db.客戶銀行資訊.Remove(客戶銀行資訊);
+            客戶銀行資訊.刪除=true;
             db.SaveChanges();
             return RedirectToAction("Index");
         }

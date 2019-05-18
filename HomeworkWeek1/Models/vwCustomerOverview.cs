@@ -14,8 +14,9 @@ namespace HomeworkWeek1.Models
     
     public partial class vwCustomerOverview
     {
-        public string Name { get; set; }
-        public int Contacts { get; set; }
-        public int Accounts { get; set; }
+        public int Id { get; set; }
+        public string 客戶名稱 { get; set; }
+        public Nullable<int> 客戶聯絡人數 { get; set; }
+        public Nullable<int> 銀行帳戶數 { get; set; }
     }
 }

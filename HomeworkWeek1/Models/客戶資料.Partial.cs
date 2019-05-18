@@ -22,8 +22,7 @@ namespace HomeworkWeek1.Models
         [StringLength(8, ErrorMessage="欄位長度不得大於 8 個字元")]
         [Required]
         public string 統一編號 { get; set; }
-        
-        [PhoneFormat]
+
         [Required]
         public string 電話 { get; set; }
         
