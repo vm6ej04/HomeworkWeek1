@@ -10,18 +10,18 @@ using HomeworkWeek1.Models;
 
 namespace HomeworkWeek1.Controllers
 {
-    public class 客戶聯絡人Controller : Controller
+    public class ContactsController : Controller
     {
         private CustomerEntities db = new CustomerEntities();
 
-        // GET: 客戶聯絡人
+        // GET: Contacts
         public ActionResult Index()
         {
             var 客戶聯絡人 = db.客戶聯絡人.Include(客 => 客.客戶資料);
             return View(客戶聯絡人.ToList());
         }
 
-        // GET: 客戶聯絡人/Details/5
+        // GET: Contacts/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,14 +36,14 @@ namespace HomeworkWeek1.Controllers
             return View(客戶聯絡人);
         }
 
-        // GET: 客戶聯絡人/Create
+        // GET: Contacts/Create
         public ActionResult Create()
         {
             ViewBag.客戶Id = new SelectList(db.客戶資料, "Id", "客戶名稱");
             return View();
         }
 
-        // POST: 客戶聯絡人/Create
+        // POST: Contacts/Create
         // 若要免於過量張貼攻擊，請啟用想要繫結的特定屬性，如需
         // 詳細資訊，請參閱 https://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
@@ -61,7 +61,7 @@ namespace HomeworkWeek1.Controllers
             return View(客戶聯絡人);
         }
 
-        // GET: 客戶聯絡人/Edit/5
+        // GET: Contacts/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -77,7 +77,7 @@ namespace HomeworkWeek1.Controllers
             return View(客戶聯絡人);
         }
 
-        // POST: 客戶聯絡人/Edit/5
+        // POST: Contacts/Edit/5
         // 若要免於過量張貼攻擊，請啟用想要繫結的特定屬性，如需
         // 詳細資訊，請參閱 https://go.microsoft.com/fwlink/?LinkId=317598。
         [HttpPost]
@@ -94,7 +94,7 @@ namespace HomeworkWeek1.Controllers
             return View(客戶聯絡人);
         }
 
-        // GET: 客戶聯絡人/Delete/5
+        // GET: Contacts/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -109,7 +109,7 @@ namespace HomeworkWeek1.Controllers
             return View(客戶聯絡人);
         }
 
-        // POST: 客戶聯絡人/Delete/5
+        // POST: Contacts/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
