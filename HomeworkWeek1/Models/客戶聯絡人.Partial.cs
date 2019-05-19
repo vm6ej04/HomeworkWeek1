@@ -21,12 +21,13 @@ namespace HomeworkWeek1.Models
             }
             else
             {
-                if(db.客戶聯絡人.Where(p=> p.Id != this.Id && p.客戶Id == this.客戶Id && p.Email != this.Email).Any())
+                if(db.客戶聯絡人.Where(p=> p.客戶Id == this.客戶Id && p.Id != this.Id && p.Email == this.Email).Any())
                 {
-                    yield return ValidationResult.Success;
+                    yield return new ValidationResult("Email 已存在", new string[] { "Email" });
                 }
 
             }
+            yield return ValidationResult.Success;
         }
     }
 
